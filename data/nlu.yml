@@ -1,0 +1,127 @@
+version: "2.0"
+nlu:
+- intent: goodbye
+  examples: |
+    - bye bye
+    - see you around
+    - see you soon :)
+    - good by
+    - have a nice day :)
+    - see you later
+    - bye
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hello there
+    - good morning
+    - good day
+    - hey there
+    - good evening
+    - good afternoon
+    - hi
+- intent: affirm # affirmer
+  examples: |
+    - yes
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - why not
+    - I agree with you
+    - absolutely
+    - you can do it
+    - fair enough
+    - ok
+- intent: deny # refuser
+  examples: |
+    - No
+    - Never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - I disagree with you
+    - it is not like this
+    - not good
+    - impossible!
+    - it can't be
+- intent: mood_great # état heureu
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - good and you?
+- intent: mood_unhappy # état malheureu
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good :(
+    - not very good
+    - extremly sad
+    - so sad
+    - i am happy
+    - i am sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot
+    - am I talking to a bot
+    - am I talking to a human
+    - are you a human
+    - I am good, and you
+    - Who are you?
+- intent: whoareyou # demande d'identité
+  examples: |
+    - who are you
+    - Do I know you
+    - who
+    - Can you tell me your name
+    - What is your name
+    - Who is this
+    - What are you made for
+    - what are you made by
+- intent: whattodo # demande de fonctionnalités
+  examples: |
+    - What can you do
+    - What function do you support
+    - Do you any cool functions
+- intent: question_cs # questions informatiques
+  examples: |
+    - what is the most popular programming language
+    - what is the lastest programming languages
+    - is html a programmaing language
+    - you are made by which programming languages 
+
+- intent: utter_ask_affirmation
+  examples: |
+    - How are you?
+    - How are you today?
+    - Are you doing well?
+    - What's up!?
+    - Are you okay?
+
+- intent: give_time
+    examples: |
+    - can you tell me what time it is
+    - tell me the time
+    - got the time
+    - what time is it
