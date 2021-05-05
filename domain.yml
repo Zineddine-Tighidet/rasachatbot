@@ -1,1 +1,62 @@
 
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- whattodo:
+    use_entities: true
+- whoareyou:
+    use_entities: true
+- give_time:
+    use_entities: true
+
+entities: []
+slots: {}
+
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am an AI assistant made with RASA, in particular with Python
+  utter_say_name:
+  - text: My name is tobby, a bot created by Zineddine and Lifang!
+  utter_whattodo:
+  - text: I have two main functions :) 1. Sympathize with you. 2. Teach you some computer science stuffs.
+  utter_choose_function: 
+  - text: Please type 1 or 2 for the first or second functionality :)
+  utter_discussion_mode: 
+  - text: Entering discussion mode... tell me something about you?
+    image: https://ernest.hec.ca/video/DAIP/methode-des-cas/etudiants/assets/images/adobestock-199481631-3-436x206.png
+
+actions: 
+  - action_show_time
+
+forms: {}
+
+e2e_actions: []
