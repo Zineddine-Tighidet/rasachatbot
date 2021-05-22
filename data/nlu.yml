@@ -89,21 +89,26 @@ nlu:
     - are you a human
     - I am good, and you
     - Who are you?
+    - what are you made of
+    - what is the programming language you are made of
+    - are you an artificial intelligence
+    - are you an AI
 - intent: whoareyou # demande d'identité
   examples: |
     - who are you
     - Do I know you
     - who
     - Can you tell me your name
-    - What is your name
-    - Who is this
-    - What are you made for
-    - what are you made by
+    - what is your name
+    - can you tell me your name
 - intent: whattodo # demande de fonctionnalités
   examples: |
-    - What can you do
-    - What function do you support
-    - Do you any cool functions
+    - what can you do
+    - what function do you support
+    - do you have any cool functions
+    - what you can do
+    - what are your skills
+    - show me what your can do
 - intent: question_cs # questions informatiques
   examples: |
     - what is the most popular programming language
@@ -119,9 +124,20 @@ nlu:
     - What's up!?
     - Are you okay?
 
-- intent: give_time
-    examples: |
+- intent: give_time # still not working (to fixe)
+  examples: |
     - can you tell me what time it is
     - tell me the time
     - got the time
     - what time is it
+
+- intent: function1
+  examples: |
+    - discussion
+    - discussion mode
+    - I want to discuss with you
+    - I want to continue talking with you
+
+- intent: function2
+  examples: |
+    - Let's talk about computer science
