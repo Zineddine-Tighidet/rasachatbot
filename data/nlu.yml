@@ -4,7 +4,10 @@ nlu:
   examples: |
     - bye bye
     - see you around
-    - see you soon :)
+    - see you soon :)    - thank you
+    - ok thank you
+    - thanks
+    - ok that helped me, thank you
     - good by
     - have a nice day :)
     - see you later
@@ -60,10 +63,6 @@ nlu:
     - I am going to save the world
     - super stoked
     - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-    - good and you?
 - intent: mood_unhappy # état malheureu
   examples: |
     - my day was horrible
@@ -109,12 +108,32 @@ nlu:
     - what you can do
     - what are your skills
     - show me what your can do
-- intent: question_cs # questions informatiques
+- intent: pl # questions informatiques
   examples: |
-    - what is the most popular programming language
-    - what is the lastest programming languages
-    - is html a programmaing language
-    - you are made by which programming languages 
+    - what is a [programming](cs) language?
+
+- intent: os
+  examples: |
+    - what is an operating system?
+
+- intent: soft
+  examples: |
+    - what is a software?
+
+- intent: virus
+  examples: |
+    - what is a malware?
+    - what is a virus?
+
+- intent: dev
+  examples: |
+    - what is a developer?
+    - what is a programmer?
+
+- intent: salary
+  examples: |
+    - what is the salary of a developer?
+    - what is the salary of a programmer?
 
 - intent: utter_ask_affirmation
   examples: |
@@ -131,13 +150,48 @@ nlu:
     - got the time
     - what time is it
 
-- intent: function1
+- intent: product
   examples: |
-    - discussion
-    - discussion mode
-    - I want to discuss with you
-    - I want to continue talking with you
+    - I want to buy something
+    - buy product
+    - product
+    - what products do you have
+    - show me all the products
+    - show me what you have
+    - what kind of products do you sell
 
-- intent: function2
-  examples: |
-    - Let's talk about computer science
+- intent: screen
+    - screen
+    - I want to buy a screen
+    - Do you have a screen
+    - Do you sell screens
+
+- intent: mouse
+    - mouse
+    - I want to buy a mouse
+    - Do you have a mouse
+    - Do you sell mouses
+
+- intent: keyboard
+    - keyboard
+    - I want to buy a keyboard
+    - Do you have a keyboard
+    - Do you sell keyboards
+
+- intent: computer
+    - computer
+    - I want to buy a computer
+    - Do you have a computer
+    - Do you sell computer
+
+- intent: thanks
+    - thank you
+    - ok thank you
+    - thanks
+    - ok that helped me, thank you
+
+- intent: howareyou
+    - how are you?
+    - good and you?
+    - I am fine and you?
+    - how are you doing
