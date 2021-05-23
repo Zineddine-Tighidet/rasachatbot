@@ -39,10 +39,74 @@ stories:
     - intent: whoareyou
     - action: utter_say_name
 
-- story: fonctionnalities # question about what can he do
+- story: fonctionnalities choose # question about what can he do
   steps:
     - intent: whattodo
     - action: utter_whattodo
-    - action: utter_choose_function
-    - intent: function1
-    - action: utter_discussion_mode
+
+- story: sell 
+  steps:
+    - intent: product
+    - action: utter_product
+
+- story: sell_screen
+  steps:
+    - intent: screen
+    - action: utter_screen
+
+- story: sell_mouse
+  steps:
+    - intent: mouse
+    - action: utter_mouse
+
+- story: sell_keyboard
+  steps:
+    - intent: keyboard
+    - action: utter_keyboard
+
+- story: sell_computer
+  steps:
+    - intent: computer
+    - action: utter_computer
+
+- story: def_pl
+  steps:
+  - intent: pl
+  - action: utter_pl
+
+- story: def_os
+  steps:
+  - intent: os
+  - action: utter_os
+
+- story: def_soft
+  steps:
+  - intent: soft
+  - action: utter_soft
+
+- story: def_virus
+  steps:
+  - intent: virus
+  - action: utter_virus
+
+- story: def_dev
+  steps:
+  - intent: dev
+  - action: utter_dev
+
+- story: def_salary
+  steps:
+  - intent: salary
+  - action: utter_salary
+
+- story: thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: howareyou
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: howareyou
+  - action: utter_howareyou
