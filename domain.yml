@@ -85,6 +85,22 @@ responses:
   utter_computer:
   - text: 'Price : 1000$  |  RAM = 8 GO  |  Memory SSD : 256  |  Intel CORE i5 8th Gen'
     image: 'https://media.btech.com/media/catalog/product/cache/9ac35d44fbf9ab480e3973716ba09643/l/e/lenovo-ideapad-3-15iml05-81wb0054fr-specs-and-details_godgetreview.com_.jpg'
+  utter_pl:
+  - text: 'according to Wikipedia a programming language is a formal language comprising a set of strings that produce various kinds of machine code output. Programming languages are used in computer programming to implement algorithms.'
+  utter_os:
+  - text: 'An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs.'
+  utter_soft:
+  - text: 'Software is a collection of instructions and data that tell a computer how to work. This is in contrast to physical hardware, from which the system is built and actually performs the work.'
+  utter_virus:
+  - text: 'A computer virus, much like a flu virus, is designed to spread from host to host and has the ability to replicate itself.'
+  utter_dev:
+  - text: 'A person or thing that develops something.'
+  utter_salary:
+  - text: 'The salary of a programmer depends of the country and the company where he works, and also his knowledge, in France it is around 2500 euros'
+  utter_thanks:
+  - text: 'It is a pleasure 😊'
+  utter_howareyou:
+  - text: 'I am fine! Tank you 😊'
 actions: 
   - action_show_time
 
