@@ -56,7 +56,8 @@ intents:
 - ask_weather
 - search_bitcoin
 - search_country
-
+- show_time
+- search_university
 
 
 entities: [] 

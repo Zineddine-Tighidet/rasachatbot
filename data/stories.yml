@@ -50,11 +50,6 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-# - story: path about time
-#   steps:
-#     - intent: give_time
-#     - action: action_show_time
-
 - story: identity
   steps:
     - intent: whoareyou

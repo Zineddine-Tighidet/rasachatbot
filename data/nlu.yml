@@ -162,13 +162,6 @@ nlu:
     - What's up!?
     - Are you okay?
 
-# - intent: give_time # still not working (to fixe)
-#   examples: |
-#     - can you tell me what time it is
-#     - tell me the time
-#     - got the time
-#     - what time is it
-
 - intent: product
   examples: |
     - I want to buy something
