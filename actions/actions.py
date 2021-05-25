@@ -134,6 +134,7 @@ class ActionWeather(Action):
 
 
 #GOOD TO GO : GET TIME
+#san%20francisco
 class ActionShowTime(Action):
 
     def name(self) -> Text:
@@ -145,18 +146,24 @@ class ActionShowTime(Action):
 
         n = random.randint(0, 2)
         ts = time.time()
-        l = ["Let me check, ", "I am happy to tell you. ", "No one use watch anymore? "]
+        l = ["Let me check. ", "I am happy to tell you. ",
+             "It's quite far. "]
 
         try:
-            getLocalTime = tracker.latest_message['text'].split()
+            userAsk = tracker.latest_message['text'].split()
+            getLocation = tracker.latest_message['text'].split()[-1]
+            api_time = 'http://api.openweathermap.org/data/2.5/weather?appid=0c42f7f6b53b244c78a418f4f181282a&q=' + getLocation
 
-            if "time" in getLocalTime:
-                print("user ask : ", getLocalTime)
+            json_data = requests.get(api_time).json()
+            timezone = json_data['timezone']
+
+            if "time" in userAsk:
+                print("user ask : ", userAsk, " timezone= ", timezone)
 
                 #convert to local time
-                gettime = l[n] +"Now is {0}".format(
-                    datetime.fromtimestamp(ts))
-
+                gettime = l[n] + "The Time is {0}".format(
+                    datetime.fromtimestamp(ts + timezone - 7200)
+                )
 
                 dispatcher.utter_message(text=gettime)
                 print("Show Time Action OK")
@@ -167,8 +174,8 @@ class ActionShowTime(Action):
 
         return []
 
-
-#NOT YET : GET UNIVERSITY
+#GOOD TO GO : GET UNIVERSITY
+#descartes/ harvard / yale/ diderot / abc ...etc
 class ActionUniversity(Action):
 
     def name(self) -> Text:
@@ -178,28 +185,81 @@ class ActionUniversity(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        university = tracker.latest_message['text'].split()
-        if university == '?':
-            university = tracker.latest_message['text'].split()[-2]
-        
-        n = random.randint(0, 2)
-        l = ["Let me check, it ", "The university which you search for ", "Look likes a wonderful university, it "]
-        try:    
-            api_universities = 'http://universities.hipolabs.com/search?name=' + university
-            print("api_universities=", api_universities)
-
-            json_data = requests.get(api_universities).json()
-            format_add = json_data[0]
-
-            #calculer temprature in celcius -273
-            message = l[n] + "is in {0}. Full name is {1}\n Check on the site : {2}".format(format_add['country'], format_add['name'], format_add['web_pages'])
+        try:
+            university = tracker.latest_message['text'].split()[-1]
+            if university == '?':
+                university = tracker.latest_message['text'].split()[-2]
             
-            print("University Action OK")
-            dispatcher.utter_message(text=message)
+
+            n = random.randint(0, 2)
+            l = ["Let me check, it ", "The university which you search for ", "Look likes a wonderful university, it "]
+            
+            api_universities = 'http://universities.hipolabs.com/search?name=' + university
+            # print("api_universities= ", api_universities)
+
+            
+            json_data = requests.get(api_universities).json()
+            # print("json_data= ", json_data)
+
+            if json_data != []:       
+                format_add = json_data[0]
+                #calculer temprature in celcius -273
+                message = l[n] + "is in {0}. The full name is {1}\nCheck on the site : {2}".format(format_add['country'], format_add['name'], format_add['web_pages'])
+                
+                print("University Action OK")
+                dispatcher.utter_message(text=message)
+            else:
+                print("University Action Not Ok")
+                dispatcher.utter_message(
+                    text="Sorry I didn't find any info of this university " + university)
+                
+            return []
+
+        except KeyError:
+            dispatcher.utter_message(
+                text="Sorry I didn't find any info of this university" + university)
+                  
+                 
+                  
+#GOOD TO GO : GET JOKE
+class ActionJoke(Action):
+
+    def name(self) -> Text:
+        return "action_tell_joke"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        n = random.randint(0, 2)
+        l = ["Check this one lol\n\n", "I hope this one will make you laugh :D\n\n",
+                     "LOL, I love this one!\n\n"]
+
+        try:
+            i = 10
+            while(i > 0):
+                i = i-1
+                api_joke = 'https://v2.jokeapi.dev/joke/Any'
+                # print("api_joke= ", api_joke)
+
+                json_data = requests.get(api_joke).json()
+                # print("json_data= ", json_data)
+
+                if json_data != "":
+                    if json_data['category'] == "Programming":
+                        format_add = json_data['setup'] + "\n" + json_data['delivery']
+
+                        message = l[n] + "{0}".format(format_add)
+
+                        dispatcher.utter_message(text=message)
+                        print("Joke Action OK")
+                        break
+
+                else: 
+                    dispatcher.utter_message(text="Sorry, I ran out all my jokes ;(")
+            # print("Joke Action Not Ok")
 
             return []
 
         except KeyError:
-            # name = tracker.latest_message['text'].split()[-1]
-            dispatcher.utter_message(text="Sorry I didn't find any info of this " + university)
-            # print ("Cannot find the city")
+            dispatcher.utter_message(text="Sorry I don't understand ;(")

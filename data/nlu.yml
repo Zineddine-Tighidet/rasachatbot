@@ -1,5 +1,30 @@
 version: "2.0"
+
 nlu:
+#Extract [entity](class)
+
+- intent: tell_joke
+  examples: |
+    - tell me some [joke](joke) please
+    - what's the funny [joke](joke) do you have
+    - do you have any [joke](joke)?
+    - give me some funny [joke](joke)
+
+- intent: search_university
+  examples: |
+    - tell me about university [university](school)
+    - do you know about university [university](school)
+    - search about university [university](school)
+    - give me the information about university [university](school)
+    
+- intent: show_time
+  examples: | 
+    - can you tell me what [time[](datetime) it is
+    - tell me the [time](datetime)
+    - get the [time](datetime)
+    - do you have the [time](datetime)?
+    - what [time](datetime) is it
+
 - intent: search_country
   examples: | 
     - show me the country of this iip [ip](adress)
@@ -18,7 +43,6 @@ nlu:
     - show me weather of [paris](ville)
     - tell me the weather of [lille](ville)
     - weather of [tours](ville)
-    
 - intent: goodbye
   examples: |
     - bye bye
@@ -127,6 +151,7 @@ nlu:
     - what you can do
     - what are your skills
     - show me what your can do
+
 - intent: pl # questions informatiques
   examples: |
     - what is a [programming](cs) language?
