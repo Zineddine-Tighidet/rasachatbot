@@ -24,8 +24,8 @@ intents:
     use_entities: true
 - whoareyou:
     use_entities: true
-- give_time:
-    use_entities: true
+# - give_time:
+#     use_entities: true
 - screen:
     use_entities: true
 - mouse:
@@ -52,6 +52,12 @@ intents:
     use_entities: true
 - product: 
     use_entites: true
+
+- ask_weather
+- search_bitcoin
+- search_country
+
+
 
 entities: [] 
 slots: {}
@@ -116,9 +122,12 @@ responses:
   - text: 'It is a pleasure 😊'
   utter_howareyou:
   - text: 'I am fine! Tank you 😊'
-actions: 
-  - action_show_time
 
+
+actions: 
+  - action_weather
+  - action_search_bitcoin
+  - action_search_country
 forms: {}
 
 e2e_actions: []

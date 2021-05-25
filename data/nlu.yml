@@ -1,5 +1,24 @@
 version: "2.0"
 nlu:
+- intent: search_country
+  examples: | 
+    - show me the country of this iip [ip](adress)
+    - what is the county of this ip [ip](adress)
+    - do you know the country of this ip [ip](adress)
+    - show country with this ip [ip](adress)
+
+- intent: search_bitcoin
+  examples: |
+    - show me the price of [bitcoin](currentprice)
+    - what is the price of [bitcoin](currentprice)
+    - price of [bitcoin](currentprice)
+
+- intent: ask_weather
+  examples: |
+    - show me weather of [paris](ville)
+    - tell me the weather of [lille](ville)
+    - weather of [tours](ville)
+    
 - intent: goodbye
   examples: |
     - bye bye
@@ -143,12 +162,12 @@ nlu:
     - What's up!?
     - Are you okay?
 
-- intent: give_time # still not working (to fixe)
-  examples: |
-    - can you tell me what time it is
-    - tell me the time
-    - got the time
-    - what time is it
+# - intent: give_time # still not working (to fixe)
+#   examples: |
+#     - can you tell me what time it is
+#     - tell me the time
+#     - got the time
+#     - what time is it
 
 - intent: product
   examples: |
