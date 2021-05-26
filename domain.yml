@@ -34,6 +34,24 @@ intents:
     use_entities: true
 - computer:
     use_entities: true
+- thanks:
+    use_entities: true
+- howareyou:
+    use_entities: true
+- pl:
+    use_entities: true
+- os: 
+    use_entities: true
+- soft:
+    use_entities: true
+- virus:
+    use_entities: true
+- dev:
+    use_entities: true
+- salary:
+    use_entities: true
+- product: 
+    use_entites: true
 
 entities: [] 
 slots: {}
@@ -55,9 +73,7 @@ responses:
   utter_say_name:
   - text: My name is tobby, a bot created by Zineddine and Lifang!
   utter_whattodo:
-  - text: I have two main functions :) 
-  - text: 1. Sympathize with you. 
-  - text: 2. Teach you some computer science stuffs.
+  - text: 'I can give some computer science definitions, sell you some computer science products and also sympathise with you! 😊'
   utter_discussion_mode: 
   - text: Entering discussion mode... tell me something about you?
     image: https://ernest.hec.ca/video/DAIP/methode-des-cas/etudiants/assets/images/adobestock-199481631-3-436x206.png
@@ -73,12 +89,11 @@ responses:
         - title: 'computer'
           payload: '/computer'
   utter_screen:
-  - text: 'Here is our best screen for only 150$:'
+  - text: 'Here is our best screen for only 150$'
     image: 'https://images.idgesg.net/images/article/2019/08/lg4k-100807985-large.jpg'
   utter_mouse:
-  - text: 'Here is a mouse that can interest you :'
+  - text: 'Here is a mouse that can interest you for 35$ only!'
     image: 'https://support.content.office.net/fr-fr/media/e8384959-ad1a-1b95-762b-2861496b886e.png'
-  - text: 'for 35$ only!'
   utter_keyboard: 
   - text: 'Here is our best keyboard for 40$ only!'
     image: 'https://www.hp.com/us-en/shop/app/assets/images/uploads/prod/how-to-turn-keyboard-lighting-on-off-hero1561055925107573.png?impolicy=prdimg&imdensity=1&imwidth=500'
