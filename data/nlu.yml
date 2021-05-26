@@ -198,36 +198,42 @@ nlu:
     - what kind of products do you sell
 
 - intent: screen
+  examples: |
     - screen
     - I want to buy a screen
     - Do you have a screen
     - Do you sell screens
 
 - intent: mouse
+  examples: |
     - mouse
     - I want to buy a mouse
     - Do you have a mouse
     - Do you sell mouses
 
 - intent: keyboard
+  examples: |
     - keyboard
     - I want to buy a keyboard
     - Do you have a keyboard
     - Do you sell keyboards
 
 - intent: computer
+  examples: |
     - computer
     - I want to buy a computer
     - Do you have a computer
     - Do you sell computer
 
 - intent: thanks
+  examples: |
     - thank you
     - ok thank you
     - thanks
     - ok that helped me, thank you
 
 - intent: howareyou
+  examples: |
     - how are you?
     - good and you?
     - I am fine and you?
