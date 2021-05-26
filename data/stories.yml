@@ -2,6 +2,65 @@ version: "2.0"
 
 stories:
 
+- story: joke path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_joke
+  - action: action_tell_joke
+  - action: utter_isFunny
+  - intent: affirm
+  - action: action_tell_joke
+  - intent: thanks
+
+- story: university path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_university
+  - action: action_search_university
+  - intent: thanks
+  - action: utter_school
+  - intent: deny
+
+- story: path about time
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: show_time
+    - action: action_show_time
+    - action: utter_did_that_help
+    - intent: affirm
+    
+- story: adress path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_country
+  - action: action_search_country
+  - intent: thanks
+  - action: utter_thanks
+
+- story: bitcoin path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_bitcoin
+  - action: action_search_bitcoin
+  - action: utter_do_you_buy
+  - intent: affirm
+
+- story: weather path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_weather
+  - action: action_weather
+  - intent: thanks
+  - action: utter_travel
+  - intent: deny
+  - action: utter_why
+
 - story: happy path
   steps:
   - intent: greet
@@ -28,11 +87,6 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
-
-- story: path about time
-  steps:
-    - intent: give_time
-    - action: action_show_time
 
 - story: identity
   steps:

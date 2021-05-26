@@ -1,5 +1,48 @@
 version: "2.0"
+
 nlu:
+#Extract [entity](class)
+
+- intent: tell_joke
+  examples: |
+    - tell me some [joke](joke) please
+    - what's the funny [joke](joke) do you have
+    - do you have any [joke](joke)?
+    - give me some funny [joke](joke)
+
+- intent: search_university
+  examples: |
+    - tell me about university [university](school)
+    - do you know about university [university](school)
+    - search about university [university](school)
+    - give me the information about university [university](school)
+    
+- intent: show_time
+  examples: | 
+    - can you tell me what [time[](datetime) it is
+    - tell me the [time](datetime)
+    - get the [time](datetime)
+    - do you have the [time](datetime)?
+    - what [time](datetime) is it
+
+- intent: search_country
+  examples: | 
+    - show me the country of this iip [ip](adress)
+    - what is the county of this ip [ip](adress)
+    - do you know the country of this ip [ip](adress)
+    - show country with this ip [ip](adress)
+
+- intent: search_bitcoin
+  examples: |
+    - show me the price of [bitcoin](currentprice)
+    - what is the price of [bitcoin](currentprice)
+    - price of [bitcoin](currentprice)
+
+- intent: ask_weather
+  examples: |
+    - show me weather of [paris](ville)
+    - tell me the weather of [lille](ville)
+    - weather of [tours](ville)
 - intent: goodbye
   examples: |
     - bye bye
@@ -108,6 +151,7 @@ nlu:
     - what you can do
     - what are your skills
     - show me what your can do
+
 - intent: pl # questions informatiques
   examples: |
     - what is a [programming](cs) language?
@@ -143,13 +187,6 @@ nlu:
     - What's up!?
     - Are you okay?
 
-- intent: give_time # still not working (to fixe)
-  examples: |
-    - can you tell me what time it is
-    - tell me the time
-    - got the time
-    - what time is it
-
 - intent: product
   examples: |
     - I want to buy something
@@ -161,36 +198,42 @@ nlu:
     - what kind of products do you sell
 
 - intent: screen
+  examples: |
     - screen
     - I want to buy a screen
     - Do you have a screen
     - Do you sell screens
 
 - intent: mouse
+  examples: |
     - mouse
     - I want to buy a mouse
     - Do you have a mouse
     - Do you sell mouses
 
 - intent: keyboard
+  examples: |
     - keyboard
     - I want to buy a keyboard
     - Do you have a keyboard
     - Do you sell keyboards
 
 - intent: computer
+  examples: |
     - computer
     - I want to buy a computer
     - Do you have a computer
     - Do you sell computer
 
 - intent: thanks
+  examples: |
     - thank you
     - ok thank you
     - thanks
     - ok that helped me, thank you
 
 - intent: howareyou
+  examples: |
     - how are you?
     - good and you?
     - I am fine and you?

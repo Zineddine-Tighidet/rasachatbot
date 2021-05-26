@@ -1,11 +1,7 @@
+version: "2.0"
 
-version: '2.0'
-config:
-  store_entities_as_slots: true
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
 intents:
+
 - greet:
     use_entities: true
 - goodbye:
@@ -24,8 +20,8 @@ intents:
     use_entities: true
 - whoareyou:
     use_entities: true
-- give_time:
-    use_entities: true
+# - give_time:
+#     use_entities: true
 - screen:
     use_entities: true
 - mouse:
@@ -53,30 +49,68 @@ intents:
 - product: 
     use_entites: true
 
-entities: [] 
-slots: {}
+- ask_weather
+- search_bitcoin
+- search_country
+- show_time
+- search_university
+- tell_joke
+
+actions:
+  - action_weather
+  - action_search_bitcoin
+  - action_search_country
+  - action_show_time
+  - action_search_university
+  - action_tell_joke
 
 responses:
+  utter_isFunny:
+  - text: "Do you want me to try again?"
+
+  utter_do_you_buy:
+  - text: "Are you going to buy it?"
+
+  utter_travel:
+  - text: "Are you going to travel?"
+  - text: "Preparing a trip?"
+
+  utter_why:
+  - text: "Why? You don't like it?"
+  - text: "Are you going to there?"
+
+  utter_school:
+  - text: "What a great university!"
+
   utter_greet:
   - text: Hey! How are you?
+  
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
+  
   utter_did_that_help:
   - text: Did that help you?
+  
   utter_happy:
   - text: Great, carry on!
+  
   utter_goodbye:
   - text: Bye
+  
   utter_iamabot:
   - text: I am an AI assistant made with RASA, in particular with Python
+  
   utter_say_name:
   - text: My name is tobby, a bot created by Zineddine and Lifang!
+  
   utter_whattodo:
   - text: 'I can give some computer science definitions, sell you some computer science products and also sympathise with you! 😊'
+  
   utter_discussion_mode: 
   - text: Entering discussion mode... tell me something about you?
     image: https://ernest.hec.ca/video/DAIP/methode-des-cas/etudiants/assets/images/adobestock-199481631-3-436x206.png
+  
   utter_product:
   - text: 'Choose the product that you want! :D'
     buttons:
@@ -88,37 +122,47 @@ responses:
           payload: '/keyboard'
         - title: 'computer'
           payload: '/computer'
+  
   utter_screen:
   - text: 'Here is our best screen for only 150$'
     image: 'https://images.idgesg.net/images/article/2019/08/lg4k-100807985-large.jpg'
+  
   utter_mouse:
   - text: 'Here is a mouse that can interest you for 35$ only!'
     image: 'https://support.content.office.net/fr-fr/media/e8384959-ad1a-1b95-762b-2861496b886e.png'
+  
   utter_keyboard: 
   - text: 'Here is our best keyboard for 40$ only!'
     image: 'https://www.hp.com/us-en/shop/app/assets/images/uploads/prod/how-to-turn-keyboard-lighting-on-off-hero1561055925107573.png?impolicy=prdimg&imdensity=1&imwidth=500'
+  
   utter_computer:
   - text: 'Price : 1000$  |  RAM = 8 GO  |  Memory SSD : 256  |  Intel CORE i5 8th Gen'
     image: 'https://media.btech.com/media/catalog/product/cache/9ac35d44fbf9ab480e3973716ba09643/l/e/lenovo-ideapad-3-15iml05-81wb0054fr-specs-and-details_godgetreview.com_.jpg'
+  
   utter_pl:
   - text: 'according to Wikipedia a programming language is a formal language comprising a set of strings that produce various kinds of machine code output. Programming languages are used in computer programming to implement algorithms.'
+  
   utter_os:
   - text: 'An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs.'
+  
   utter_soft:
   - text: 'Software is a collection of instructions and data that tell a computer how to work. This is in contrast to physical hardware, from which the system is built and actually performs the work.'
+  
   utter_virus:
   - text: 'A computer virus, much like a flu virus, is designed to spread from host to host and has the ability to replicate itself.'
+  
   utter_dev:
   - text: 'A person or thing that develops something.'
+  
   utter_salary:
   - text: 'The salary of a programmer depends of the country and the company where he works, and also his knowledge, in France it is around 2500 euros'
+  
   utter_thanks:
   - text: 'It is a pleasure 😊'
+  
   utter_howareyou:
-  - text: 'I am fine! Tank you 😊'
-actions: 
-  - action_show_time
+  - text: 'I am fine! Thank you 😊'
 
-forms: {}
-
-e2e_actions: []
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
