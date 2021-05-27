@@ -12,7 +12,7 @@ RASA CHATBOT 2020-2021
 ### Branch : **main**
 
 ### Exécution
-- Pour tester la partie vers un serveur : (???)
+- Pour tester la partie vers un serveur : http://35.195.60.43/guest/conversations/production/74f8a347abee477bb679f1b9b7605076
 
 - Pour tester la partie **personnalisé** :
     - actions personnalisées : demande weather, prix de bitcoin, time, info d'université et le pays avec ip
