@@ -19,7 +19,7 @@ nlu:
     
 - intent: show_time
   examples: | 
-    - can you tell me what [time[](datetime) it is
+    - can you tell me what [time](datetime) it is
     - tell me the [time](datetime)
     - get the [time](datetime)
     - do you have the [time](datetime)?
@@ -27,9 +27,9 @@ nlu:
 
 - intent: search_country
   examples: | 
-    - show me the country of this iip [ip](adress)
+    - show me the country of this ip [ip](adress)
     - what is the county of this ip [ip](adress)
-    - do you know the country of this ip [ip](adress)
+    - do you know the country of this [ip](adress)
     - show country with this ip [ip](adress)
 
 - intent: search_bitcoin

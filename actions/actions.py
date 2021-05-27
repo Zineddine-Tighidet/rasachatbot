@@ -71,7 +71,7 @@ class ActionBitcoin(Action):
         try:
               
             api_bitcoin = 'https://api.coindesk.com/v1/bpi/currentprice/eur.json'
-            print("api_bitcoin=", api_bitcoin)
+            # print("api_bitcoin=", api_bitcoin)
 
             json_data = requests.get(api_bitcoin).json()
 
@@ -158,7 +158,7 @@ class ActionShowTime(Action):
             timezone = json_data['timezone']
 
             if "time" in userAsk:
-                print("user ask : ", userAsk, " timezone= ", timezone)
+                # print("user ask : ", userAsk, " timezone= ", timezone)
 
                 #convert to local time
                 gettime = l[n] + "The Time is {0}".format(
@@ -262,4 +262,4 @@ class ActionJoke(Action):
             return []
 
         except KeyError:
-            dispatcher.utter_message(text="Sorry I don't understand ;(")
+            dispatcher.utter_message(text="Sorry, I ran out all my jokes ;(")

@@ -9,6 +9,7 @@ RASA CHATBOT 2020-2021
 
 - diponible en ligne : https://youtu.be/NEJgeqrZhUw
 
+### Branch : **main**
 
 ### Exécution
 - Pour tester la partie vers un serveur : (???)

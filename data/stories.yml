@@ -31,6 +31,7 @@ stories:
     - action: action_show_time
     - action: utter_did_that_help
     - intent: affirm
+    - action: utter_thanks
     
 - story: adress path
   steps:
@@ -49,6 +50,7 @@ stories:
   - action: action_search_bitcoin
   - action: utter_do_you_buy
   - intent: affirm
+  - action: utter_careful
 
 - story: weather path
   steps:

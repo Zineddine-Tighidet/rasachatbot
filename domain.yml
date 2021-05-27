@@ -56,6 +56,15 @@ intents:
 - search_university
 - tell_joke
 
+entities:
+  - joke
+  - school
+  - datetime
+  - adress
+  - currentprice
+  - ville
+  
+
 actions:
   - action_weather
   - action_search_bitcoin
@@ -65,6 +74,8 @@ actions:
   - action_tell_joke
 
 responses:
+  utter_careful:
+  - text: "Be careful with your investing decisions!"
   utter_isFunny:
   - text: "Do you want me to try again?"
 
