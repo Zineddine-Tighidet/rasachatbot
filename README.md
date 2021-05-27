@@ -14,9 +14,10 @@ RASA CHATBOT 2020-2021
 ### Exécution
 - Pour tester la partie vers un serveur : (???)
 
-- Pour tester la partie **personnalisé** : 
+- Pour tester la partie **personnalisé** :
+    - actions personnalisées : demande weather, prix de bitcoin, time, info d'université et le pays avec ip
     - le premier terminal est pour lancer le programme rasa entrainé avec notre modèle dialogique définissant les reactions : `rasa run actions`
-    - le deuxieme terminal est pour lancer un  Shell avec le RASA chatbot : `rasa shell` qui s'effectue l'interractions avec l'utilisateur
+    - le deuxieme terminal est pour lancer un  Shell avec le RASA chatbot : `rasa shell` qui s'effectue l'interractions avec l'utilisateur en utilisant le model `CustomizedActionsWithPyton.tar.gz`
 
 ### Structure du Projet
 - **data** : 
